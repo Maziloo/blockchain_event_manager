@@ -4,12 +4,15 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { WalletProvider } from './contexts/WalletContext';
+import {EventProvider } from './contexts/EventContext';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <WalletProvider>
-      <App />
+      <EventProvider>
+        <App />
+      </EventProvider>
     </WalletProvider>
   </React.StrictMode>
 );
